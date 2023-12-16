@@ -15,7 +15,7 @@
     <div id="header">
         <nav class="navbar navbar-expand-lg navbar-dark">
             <div class="container">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="index.html">
                     <img src="assets/logo.png" alt="logo" class="w-75">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -77,50 +77,53 @@
         </div>
     </section> -->
 
-    <section class="hero">
-        <div class="container">
-            <div class="swiper bannerSlider">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="mobile-content">
-                            <div class="hero-para">
-                                <p class="text-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eu vulputate
-                                    nulla. Morbi vel dui non ipsum consequat finibus nec nec odio. In tellus nunc,
-                                    facilisis eu pharetra at, suscipit nec tortor. Ut at egestas lacus. Fusce porta mi in massa
-                                    dictum semper eget quis ex. Sed ex ligula, tempor</p>
-                            </div>
-                            <div class="hero-title">
-                                <h2 class="text-light">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                </h2>
-                            </div>
+    <!-- Swiper -->
+    <section>
+
+        <div class="swiper-hero bannerSlider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" style="background-image: url('assets/bg.png');">
+                    <div class="mobile-content">
+                        <div class="hero-para">
+                            <p class="text-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eu
+                                vulputate
+                                nulla. Morbi vel dui non ipsum consequat finibus nec nec odio. In tellus nunc,
+                                facilisis eu pharetra at, suscipit nec tortor. Ut at egestas lacus. Fusce porta mi in
+                                massa
+                                dictum semper eget quis ex. Sed ex ligula, tempor</p>
                         </div>
-                        <a href="#" class="btn btn-light">Saiba mais</a>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="mobile-content">
-                            <div class="hero-para">
-                                <p class="text-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eu vulputate
-                                    nulla. Morbi vel dui non ipsum consequat finibus nec nec odio. In tellus nunc,
-                                    facilisis eu pharetra at, suscipit nec tortor. Ut at egestas lacus. Fusce porta mi in massa
-                                    dictum semper eget quis ex. Sed ex ligula, tempor</p>
-                            </div>
-                            <div class="hero-title">
-                                <h2 class="text-light">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                </h2>
-                            </div>
+                        <div class="hero-title">
+                            <h2 class="text-light">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            </h2>
                         </div>
-                        <a href="#" class="btn btn-light">Saiba mais</a>
                     </div>
-                    
+                    <a href="#" class="btn btn-light btn-sm">Saiba mais</a>
                 </div>
-                <div class="swiper-pagination"></div>
+                <div class="swiper-slide" style="background-image: url('assets/bg.png');">
+                    <div class="mobile-content">
+                        <div class="hero-para">
+                            <p class="text-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eu
+                                vulputate
+                                nulla. Morbi vel dui non ipsum consequat finibus nec nec odio. In tellus nunc,
+                                facilisis eu pharetra at, suscipit nec tortor. Ut at egestas lacus. Fusce porta mi in
+                                massa
+                                dictum semper eget quis ex. Sed ex ligula, tempor</p>
+                        </div>
+                        <div class="hero-title">
+                            <h2 class="text-light">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            </h2>
+                        </div>
+                    </div>
+                    <a href="#" class="btn btn-light">Saiba mais</a>
+                </div>
 
             </div>
+            <div class="swiper-pagination"></div>           
         </div>
-
     </section>
+
 
     <!--section Quem somos-->
     <section class="p-lg-5 somos" id="Quemsomos">
@@ -479,12 +482,12 @@
         var swiper = new Swiper(".bannerSlider", {
             pagination: {
                 el: ".swiper-pagination",
-                clickable: true,
+                dynamicBullets: true,
             },
-            autoplay: {
-                delay: 3500,
-                disableOnInteraction: false,
-            },
+            // autoplay: {
+            //     delay: 3500,
+            //     disableOnInteraction: false,
+            // },
         });
 
         var swiper = new Swiper(".mySwiper", {

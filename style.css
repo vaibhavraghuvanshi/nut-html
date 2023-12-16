@@ -27,6 +27,7 @@ h6 {
 
 
 body {
+    overflow-x: hidden;
     font-family: 'outfit';
     font-size: 18px;
     font-weight: 400;
@@ -109,7 +110,7 @@ ul.navbar-nav li.nav-item a.nav-link:hover {
 /* HERO SECTION */
 
 .hero {
-    background-image: url('assets/bg.png');
+    /* background-image: url('assets/bg.png'); */
     background-position: top center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -132,7 +133,7 @@ ul.navbar-nav li.nav-item a.nav-link:hover {
     font-weight: 400;
 }
 
-.mobile-content{
+.mobile-content {
     display: flex;
     flex-direction: column;
     width: 60%;
@@ -263,6 +264,40 @@ ul.navbar-nav li.nav-item a.nav-link:hover {
 
 .swiper-pagination-bullet-active {
     background: #252525 !important;
+}
+
+.swiper-hero {
+    width: 100%;
+    height: 100vh;
+}
+
+.swiper-hero .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    padding: 0 150px;
+    display: flex;
+    background-position: center;
+    background-size: cover;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+/* .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    padding: 0 150px;
+    display: flex;
+    background-position: center;
+    background-size: cover;
+    flex-direction: column;
+    align-items: inherit;
+    justify-content: center;
+} */
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
 }
 
 /**BigImage*/
@@ -438,11 +473,13 @@ footer p {
     color: #16365C;
     margin-right: 10px;
 }
-.footer-divider{
+
+.footer-divider {
     width: 100px;
     background-color: #16365C;
     height: 2px;
 }
+
 .footer-divider {
     margin: 40px auto;
     width: 90%;
@@ -454,8 +491,8 @@ footer p {
 
 @media screen and (max-width:991px) {
     .hero-title h2 {
-    font-size: 38px !important;
-}
+        font-size: 38px !important;
+    }
 
     .text-wrapper p {
         font-size: 18px;
@@ -517,9 +554,10 @@ footer p {
         justify-content: space-around;
         flex-direction: column;
         align-items: center;
-        width: 35%;
+        width: 50%;
         margin: 0 auto;
     }
+
     .services {
         padding: 40px 0;
     }
@@ -533,12 +571,14 @@ footer p {
     .somos {
         padding: 30px 0 25px 0 !important;
     }
+
     footer p {
         font-size: 16px !important;
     }
+
     .navbar {
-    padding: 10px 0 15px !important;
-}
+        padding: 10px 0 15px !important;
+    }
 
 }
 
@@ -547,6 +587,13 @@ footer p {
     .service-wrapper {
         width: 65% !important;
         height: 42vh !important;
+        margin: 25px auto;
+        width: 65% !important;
+        height: 42vh !important;
+    }
+
+    .timeline{
+        padding: 0;
     }
 
     .service-content ul li {
@@ -591,9 +638,22 @@ footer p {
         margin: 20px 0;
     }
 
-    .client-slider {        
+    .client-slider {
         height: 50vh;
         width: 100% !important;
+    }
+
+    .swiper-slide {
+        padding: 45px !important;
+    }
+
+    .mobile-content {
+        width: 90%;
+    }
+
+    .hero-title h2 {
+        font-size: 34px !important;
+        line-height: 38px;
     }
 }
 
@@ -640,7 +700,8 @@ footer p {
         height: 65vh;
         width: 100%;
     }
-    .service-wrapper p{
+
+    .service-wrapper p {
         font-size: 16px;
     }
 
@@ -653,6 +714,7 @@ footer p {
     .heading h2 {
         text-align: center;
     }
+
     /*** Blog**/
 
     .blog h2 {
@@ -714,66 +776,85 @@ footer p {
         width: 75%;
         margin: 25px auto;
     }
-    .client-slider {        
+
+    .client-slider {
         height: 50vh;
         width: 100% !important;
         margin: 0 auto;
     }
+
     .slider-content {
-        padding: 0 0 45px;        
+        padding: 0 0 45px;
         width: 80%;
         margin: 0 auto;
     }
+
     .slider-content p {
         font-size: 22px;
         font-weight: 500;
     }
+
     .client-slider {
         height: 38vh !important;
         width: 100% !important;
         margin: 0 auto;
     }
-    #navBrand{
+
+    #navBrand {
         display: none !important;
-    };
+    }
+
+    ;
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
-  
+
     /* CSS */
     .service-wrapper {
         height: 45vh;
         width: 100%;
     }
-        
-  }
 
-  @media (min-width: 320px) and (max-width: 480px) {
-  
+    .swiper-slide {
+        padding: 65px !important;
+    }
+
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+
     /* CSS */
+    .swiper-slide {
+        padding: 45px !important;
+    }
 
     .service-wrapper {
         height: 56vh;
         width: 100%;
     }
+
     .service-wrapper {
         margin: 25px auto;
         width: 65% !important;
         height: 54vh !important;
     }
+
     .contact .data-contact h2 {
         font-size: 30px !important;
     }
+
     .contact {
         height: 54vh !important;
     }
+
     .slider-content {
         padding: 0 0 45px;
         width: 100%;
         margin: 0 auto;
     }
-    .hero{
-        height:75vh;
+
+    .hero {
+        height: 75vh;
     }
-    
-  }
+
+}
